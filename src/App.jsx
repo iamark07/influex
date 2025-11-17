@@ -1,10 +1,15 @@
-import React from 'react'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './Pages/Home';
 
 function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <h1 className='text-6xl text-blue-500'>Hello Influencer's</h1>
-    </div>
+    <Router>
+      <Routes>
+        {/* ui pages */}
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>
   )
 }
 

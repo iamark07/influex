@@ -116,7 +116,7 @@ function Home() {
               <h2 className="text-2xl sm:text-5xl font-bold text-gray-900 poppins tracking-tight">
                 India’s Fastest Growing Creator Community
               </h2>
-              <p className="mt-4 md:text-lg text-gray-600 font-sans max-w-5xl mx-auto">
+              <p className="mt-4 text-sm md:text-lg text-gray-600 font-sans max-w-5xl mx-auto">
                 From fashion and lifestyle to tech, gaming, travel, and fitness,
                 we provide the strategy and support for creators to thrive in a
                 competitive digital landscape.
@@ -214,14 +214,14 @@ function Home() {
               <div className="inline-block mb-6 text-xs sm:text-sm rounded-full border border-[#ebebeb] px-5 py-2">
                 Our Services
               </div>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-8 lg:gap-12 items-start">
                 {/* Left Side - Title and Badge */}
                 <h2 className="text-2xl sm:text-5xl font-bold text-gray-900 poppins tracking-tight leading-tight">
                   What we can do for you
                 </h2>
                 {/* Right Side - Description and CTA */}
                 <div>
-                  <p className="text-base sm:text-lg text-gray-600 font-sans mb-6">
+                  <p className="text-sm sm:text-lg text-gray-600 font-sans mb-6">
                     Helping Indian creators grow with brand deals, strategy &
                     content. From designing strategies to executing campaigns,
                     we provide quality solutions tailored to your needs.
@@ -244,7 +244,7 @@ function Home() {
                 </div>
                 <div className="xl:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
                   {/* Card 1: Brand Partnerships */}
-                  <div className="group w-full rounded-2xl overflow-hidden transition-all duration-300 bg-[#e6e9ff] p-6 md:p-8 lg:p-5 xl:p-8 flex flex-col">
+                  <div className="group w-full rounded-2xl overflow-hidden transition-all duration-300 bg-[#e6e9ff] p-6 md:p-8 lg:p-5 xl:p-8 flex flex-col hover:shadow-lg shadow-gray-300">
                     <div className="grow">
                       <div className="w-14 h-14 rounded-full bg-[#F6F8FE] flex items-center justify-center mb-5">
                         <i className="fa-solid fa-handshake-angle text-2xl text-[#adb8ff]"></i>
@@ -264,7 +264,7 @@ function Home() {
                   </div>
 
                   {/* Card 2: Growth Strategy */}
-                  <div className="group w-full rounded-2xl overflow-hidden transition-all duration-300 bg-[#e6e9ff] p-6 md:p-8 lg:p-5 xl:p-8 flex flex-col">
+                  <div className="group w-full rounded-2xl overflow-hidden transition-all duration-300 bg-[#e6e9ff] p-6 md:p-8 lg:p-5 xl:p-8 flex flex-col hover:shadow-lg shadow-gray-300">
                     <div className="grow">
                       <div className="w-14 h-14 rounded-full bg-[#F6F8FE] flex items-center justify-center mb-5">
                         <i className="fa-solid fa-arrow-trend-up text-2xl text-[#adb8ff]"></i>
@@ -284,7 +284,7 @@ function Home() {
                   </div>
 
                   {/* Card 3: Content Production */}
-                  <div className="group w-full rounded-2xl overflow-hidden transition-all duration-300 bg-[#e6e9ff] p-6 md:p-8 lg:p-5 xl:p-8 flex flex-col">
+                  <div className="group w-full rounded-2xl overflow-hidden transition-all duration-300 bg-[#e6e9ff] p-6 md:p-8 lg:p-5 xl:p-8 flex flex-col hover:shadow-lg shadow-gray-300">
                     <div className="grow">
                       <div className="w-14 h-14 rounded-full bg-[#F6F8FE] flex items-center justify-center mb-5">
                         <i className="fa-solid fa-clapperboard text-2xl text-[#adb8ff]"></i>
@@ -304,7 +304,7 @@ function Home() {
                   </div>
 
                   {/* Card 4: Community Management */}
-                  <div className="group w-full rounded-2xl overflow-hidden transition-all duration-300 bg-[#e6e9ff] p-6 md:p-8 lg:p-5 xl:p-8 flex flex-col">
+                  <div className="group w-full rounded-2xl overflow-hidden transition-all duration-300 bg-[#e6e9ff] p-6 md:p-8 lg:p-5 xl:p-8 flex flex-col hover:shadow-lg shadow-gray-300">
                     <div className="grow">
                       <div className="w-14 h-14 rounded-full bg-[#F6F8FE] flex items-center justify-center mb-5">
                         <i className="fa-solid fa-users text-2xl text-[#adb8ff]"></i>

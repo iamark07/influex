@@ -44,3 +44,19 @@ button{
 .animate-bubble-2 {
   animation: bubble-float-2 6s ease-in-out infinite;
 }
+
+@keyframes scroll-down-animation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-scroll-down {
+  animation: scroll-down-animation 2s ease-in-out infinite;
+}

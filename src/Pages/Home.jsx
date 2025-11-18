@@ -102,7 +102,7 @@ function Home() {
             className="absolute bottom-16 md:bottom-8 left-1/2 -translate-x-1/2 z-30"
             aria-label="Scroll to next section"
           >
-            <div className="animate-scroll-down py-3 px-2 rounded-full border border-pink-200/50 flex items-center justify-center text-gray-700 hover:text-pink-500 hover:bg-white/50 transition-all duration-300 cursor-pointer">
+            <div className="animate-scroll-down py-3 px-2 rounded-full border border-gray-300 flex items-center justify-center text-gray-700 hover:text-pink-500 hover:border-pink-500/50 hover:bg-white/50 transition-all duration-300 cursor-pointer">
               <i className="ri-arrow-down-line text-lg sm:text-2xl"></i>
             </div>
           </a>

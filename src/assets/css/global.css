@@ -14,37 +14,6 @@ button{
   cursor: pointer;
 }
 
-@keyframes bubble-float-1 {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-@keyframes bubble-float-2 {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-.animate-bubble-1 {
-  animation: bubble-float-1 6s ease-in-out infinite;
-  animation-delay: 1.5s;
-}
-.animate-bubble-2 {
-  animation: bubble-float-2 6s ease-in-out infinite;
-}
-
 @keyframes scroll-down-animation {
   0% {
     transform: translateY(0);

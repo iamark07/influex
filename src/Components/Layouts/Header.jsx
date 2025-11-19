@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,62 +16,163 @@ function Header() {
     };
 
     // Add event listener
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     // Clean up event listener on component unmount
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []); // Empty dependency array ensures this effect runs only once on mount
 
   return (
     <>
-    <header className={`fixed top-0 z-50 w-full transition-all duration-300 border-b border-transparent ${isScrolled ? 'bg-white/90 backdrop-blur-sm border-[#ebebeb]!' : 'bg-transparent'}`}>
-      <div className="container mx-auto flex py-4 sm:py-6 items-center justify-between px-4 sm:px-6">
-        {/* Brand Logo */}
-        <div className="flex items-center">
-          <Link to="/" className="text-2xl md:text-3xl font-semibold text-gray-900">
-            Influex.
-          </Link>
-        </div>
+      <header
+        id="main-header"
+        className={`w-full top-0 z-50 transition-all duration-500 ease-in-out border-b bg-white  ${
+          isScrolled ? "sticky border-gray-200" : "sticky border-transparent"
+        }`}
+      >
+        <div
+          id="sub-header-container"
+          className="container mx-auto px-4 sm:px-6 py-4 sm:py-6 flex items-center justify-between w-full transition-all duration-500 ease-in-out"
+        >
+          {/* Brand Logo */}
+          <div className="shrink-0">
+            <Link
+              to="/"
+              className="text-2xl md:text-3xl font-medium text-gray-900 tracking-tight"
+            >
+              Influex.
+            </Link>
+          </div>
 
-        {/* Desktop Navigation */}
-        <nav className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden items-center lg:flex gap-1 border border-[#ebebeb] rounded-full p-1">
-          <Link to="/" className="py-2 px-6 rounded-full text-[15px] hover:bg-pink-500 transition-all duration-200 bg-pink-400 text-white">
-            Home
-          </Link>
-          <a href="#services" className="py-2 px-6 rounded-full text-[15px] hover:bg-[#f5f5f5] text-gray-900">
-            Services
-          </a>
-          <a href="#case-studies" className="py-2 px-6 rounded-full text-[15px] hover:bg-[#f5f5f5] text-gray-900">
-            Case Studies
-          </a>
-          <Link to="/contact" className="py-2 px-6 rounded-full text-[15px] hover:bg-[#f5f5f5] text-gray-900">
-            Contact
-          </Link>
-        </nav>
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center gap-x-10">
+            <Link
+              to="/"
+              className="text-base text-gray-700 hover:text-gray-900 hover:underline underline-offset-4 transition-colors"
+            >
+              Home
+            </Link>
+            <a
+              href="#services"
+              className="text-base text-gray-700 hover:text-gray-900 hover:underline underline-offset-4 transition-colors"
+            >
+              Services
+            </a>
+            <a
+              href="#case-studies"
+              className="text-base text-gray-700 hover:text-gray-900 hover:underline underline-offset-4 transition-colors"
+            >
+              Case Studies
+            </a>
+            <Link
+              to="/contact"
+              className="text-base text-gray-700 hover:text-gray-900 hover:underline underline-offset-4 transition-colors"
+            >
+              Contact
+            </Link>
+          </nav>
 
-        {/* CTA and Mobile Menu Button */}
-        <div className="flex items-center gap-4">
-          <Link to="/apply" className="hidden py-3 px-7 text-sm xl:text-[15px] text-white bg-gray-700 rounded-full md:block">
-            Apply As a Creator
-          </Link>
-          <button
-            onClick={toggleMenu}
-            className="inline-flex items-center justify-center rounded-sm px-2.5 py-1 border border-[#e5d1db] hover:text-gray-800 lg:hidden"
-            aria-controls="mobile-menu"
-            aria-expanded={isMenuOpen}
-          >
-            <span className="sr-only">Open main menu</span>
-            <i className="ri-menu-line text-[21px]"></i>
-          </button>
+          {/* CTA and Mobile Menu Button */}
+          <div className="flex items-center gap-4 shrink-0">
+            <Link
+              to="/apply"
+              className="hidden md:inline-block py-2.5 px-6 text-sm font-medium text-gray-800 border border-gray-400 hover:bg-gray-900 hover:text-white transition-colors"
+            >
+              Apply As a Creator
+            </Link>
+            <button
+              onClick={toggleMenu}
+              className="inline-flex items-center justify-center rounded-md p-2 text-gray-600 hover:text-gray-900 lg:hidden"
+              aria-controls="mobile-menu"
+              aria-expanded={isMenuOpen}
+            >
+              <span className="sr-only">Open main menu</span>
+              <i className="ri-menu-line text-[21px]"></i>
+            </button>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
+
+      <header
+        id="main-header"
+        className={`hidden z-50 left-1/2 -translate-x-1/2 transition-all duration-500 ease-in-out ${
+          isScrolled
+            ? "fixed  w-full max-w-[1700px] top-0 bg-white/90 backdrop-blur-sm border-b border-gray-200"
+            : "absolute w-[90%] sm:w-[94%] max-w-[1540px] top-5 bg-white"
+        }`}
+      >
+        <div
+          id="sub-header-container"
+          className={`container mx-auto flex items-center justify-between w-full transition-all duration-500 ease-in-out ${
+            isScrolled
+              ? "h-20 sm:h-24 px-4 sm:px-6"
+              : "h-20 sm:h-24 p-3 sm:p-4 md:p-3 xl:py-5 xl:pl-10 xl:pr-[52px]"
+          }`}
+        >
+          {/* Brand Logo */}
+          <div className="shrink-0">
+            <Link
+              to="/"
+              className="text-2xl md:text-3xl font-medium text-gray-900 tracking-tight"
+            >
+              Influex.
+            </Link>
+          </div>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center gap-x-10">
+            <Link
+              to="/"
+              className="text-base text-gray-700 hover:text-gray-900 hover:underline underline-offset-4 transition-colors"
+            >
+              Home
+            </Link>
+            <a
+              href="#services"
+              className="text-base text-gray-700 hover:text-gray-900 hover:underline underline-offset-4 transition-colors"
+            >
+              Services
+            </a>
+            <a
+              href="#case-studies"
+              className="text-base text-gray-700 hover:text-gray-900 hover:underline underline-offset-4 transition-colors"
+            >
+              Case Studies
+            </a>
+            <Link
+              to="/contact"
+              className="text-base text-gray-700 hover:text-gray-900 hover:underline underline-offset-4 transition-colors"
+            >
+              Contact
+            </Link>
+          </nav>
+
+          {/* CTA and Mobile Menu Button */}
+          <div className="flex items-center gap-4 shrink-0">
+            <Link
+              to="/apply"
+              className="hidden md:inline-block py-2.5 px-6 text-sm font-medium text-gray-800 border border-gray-400 hover:bg-gray-900 hover:text-white transition-colors"
+            >
+              Apply As a Creator
+            </Link>
+            <button
+              onClick={toggleMenu}
+              className="inline-flex items-center justify-center rounded-md p-2 text-gray-600 hover:text-gray-900 lg:hidden"
+              aria-controls="mobile-menu"
+              aria-expanded={isMenuOpen}
+            >
+              <span className="sr-only">Open main menu</span>
+              <i className="ri-menu-line text-[21px]"></i>
+            </button>
+          </div>
+        </div>
+      </header>
       {/* Mobile Menu Overlay */}
       <div
         className={`fixed inset-0 bg-black/25 z-50 lg:hidden transition-opacity duration-300 ${
-          isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+          isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
         onClick={toggleMenu}
         aria-hidden="true"
@@ -80,7 +181,7 @@ function Header() {
       {/* Mobile Menu Content */}
       <div
         className={`fixed top-0 right-0 h-full w-4/5 max-w-xs bg-white shadow-lg p-6 z-60 transform transition-transform duration-300 ease-in-out lg:hidden ${
-          isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+          isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
         id="mobile-menu"
       >
@@ -91,11 +192,41 @@ function Header() {
           </button>
         </div>
         <nav className="flex flex-col gap-y-4">
-          <Link to="/" onClick={toggleMenu} className="text-gray-800 hover:text-pink-500">Home</Link>
-          <a href="#services" onClick={toggleMenu} className="text-gray-800 hover:text-pink-500">Services</a>
-          <a href="#case-studies" onClick={toggleMenu} className="text-gray-800 hover:text-pink-500">Case Studies</a>
-          <Link to="/contact" onClick={toggleMenu} className="text-gray-800 hover:text-pink-500">Contact</Link>
-          <Link to="/apply" onClick={toggleMenu} className="mt-4 py-3 px-7 text-center text-sm text-white bg-pink-400 rounded-full">Apply As a Creator</Link>
+          <Link
+            to="/"
+            onClick={toggleMenu}
+            className="text-lg text-gray-800 hover:text-gray-900"
+          >
+            Home
+          </Link>
+          <a
+            href="#services"
+            onClick={toggleMenu}
+            className="text-lg text-gray-800 hover:text-gray-900"
+          >
+            Services
+          </a>
+          <a
+            href="#case-studies"
+            onClick={toggleMenu}
+            className="text-lg text-gray-800 hover:text-gray-900"
+          >
+            Case Studies
+          </a>
+          <Link
+            to="/contact"
+            onClick={toggleMenu}
+            className="text-lg text-gray-800 hover:text-gray-900"
+          >
+            Contact
+          </Link>
+          <Link
+            to="/apply"
+            onClick={toggleMenu}
+            className="mt-6 py-3 w-full text-center text-base font-medium text-gray-800 border border-gray-400 hover:bg-gray-900 hover:text-white transition-colors"
+          >
+            Apply As a Creator
+          </Link>
         </nav>
       </div>
     </>

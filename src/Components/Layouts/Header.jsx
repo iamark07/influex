@@ -75,13 +75,14 @@ function Header() {
           </nav>
 
           {/* CTA and Mobile Menu Button */}
-          <div className="flex items-center gap-4 shrink-0">
+          <div className="hidden items-center gap-4 shrink-0">
             <Link
               to="/apply"
-              className="hidden md:inline-block py-2.5 px-6 text-sm font-medium text-gray-800 border border-gray-400 hover:bg-gray-900 hover:text-white transition-colors"
+              className="py-2.5 px-6 text-sm font-medium text-gray-800 border border-gray-400 hover:bg-gray-900 hover:text-white transition-colors"
             >
               Apply As a Creator
             </Link>
+          </div>
             <button
               onClick={toggleMenu}
               className="inline-flex items-center justify-center rounded-md p-2 text-gray-600 hover:text-gray-900 lg:hidden"
@@ -91,7 +92,6 @@ function Header() {
               <span className="sr-only">Open main menu</span>
               <i className="ri-menu-line text-[21px]"></i>
             </button>
-          </div>
         </div>
       </header>
 

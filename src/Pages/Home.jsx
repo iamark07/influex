@@ -151,7 +151,8 @@ function Home() {
                   </span>
                 </h2>
                 <p className="mt-8 text-lg sm:text-xl text-gray-600 font-sans max-w-lg mx-auto lg:mx-0">
-                  From concept to campaign, we partner with creators to build stories that move audiences.
+                  From concept to campaign, we partner with creators to build
+                  stories that move audiences.
                 </p>
               </div>
               {/* Right Side: Text */}
@@ -167,7 +168,7 @@ function Home() {
         </section>
 
         {/* Creators Showcase Section */}
-        <section className="relative py-24 sm:py-32 bg-white overflow-hidden">
+        <section className="relative py-24 sm:py-32 bg-white overflow-hidden hidden">
           <div className="container mx-auto px-4 sm:px-6 relative">
             {/* Content */}
             <div className="relative z-10 text-center max-w-5xl mx-auto">
@@ -264,8 +265,92 @@ function Home() {
           </div>
         </section>
 
+        {/* Creative Floating Collage Section */}
+        <section className="bg-white py-24 sm:py-32 overflow-hidden hidden">
+          <div className="container mx-auto px-4 sm:px-6">
+            {/* Section Heading */}
+            <div className="text-center mb-20">
+              <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 poppins tracking-tight">
+                The Creator Spectrum
+              </h2>
+              <p className="mt-4 text-lg text-gray-600 font-sans max-w-2xl mx-auto">
+                A glimpse into the creativity, strategy, and energy inside our
+                creator network.
+              </p>
+            </div>
+
+            {/* FLOATING COLLAGE LAYOUT */}
+            <div className="relative flex flex-wrap justify-center gap-6">
+              {/* Large Top Left */}
+              <div className="group relative overflow-hidden rounded-xl w-[330px] h-[230px] sm:w-[360px] sm:h-[260px]">
+                <img
+                  src="https://images.unsplash.com/photo-1558402681-459490272726"
+                  className="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+                />
+                <div className="absolute bottom-0 left-0 right-0 p-4 bg-black/40 opacity-0 group-hover:opacity-100 transition">
+                  <p className="text-white text-sm font-semibold tracking-wide">
+                    TEAMWORK
+                  </p>
+                </div>
+              </div>
+
+              {/* Small Left */}
+              <div className="group relative overflow-hidden rounded-xl w-[220px] h-[180px] sm:w-[250px] sm:h-[200px] mt-10">
+                <img
+                  src="https://images.unsplash.com/photo-1590650046871-2f9f1c7b3d58"
+                  className="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+                />
+                <div className="absolute bottom-0 left-0 right-0 p-3 bg-black/40 opacity-0 group-hover:opacity-100 transition">
+                  <p className="text-white text-sm font-semibold tracking-wide">
+                    PLANNING
+                  </p>
+                </div>
+              </div>
+
+              {/* Tall Center */}
+              <div className="group relative overflow-hidden rounded-xl w-[260px] h-[400px] sm:w-[300px] sm:h-[450px]">
+                <img
+                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+                  className="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+                />
+                <div className="absolute bottom-0 left-0 right-0 p-4 bg-black/40 opacity-0 group-hover:opacity-100 transition">
+                  <p className="text-white text-sm font-semibold tracking-wide">
+                    CREATIVE MEETUPS
+                  </p>
+                </div>
+              </div>
+
+              {/* Medium Right */}
+              <div className="group relative overflow-hidden rounded-xl w-[280px] h-[220px] sm:w-[320px] sm:h-[250px] mt-14">
+                <img
+                  src="https://images.unsplash.com/photo-1581091012184-5c76d3971f97"
+                  className="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+                />
+                <div className="absolute bottom-0 left-0 right-0 p-4 bg-black/40 opacity-0 group-hover:opacity-100 transition">
+                  <p className="text-white text-sm font-semibold tracking-wide">
+                    WORKFLOW
+                  </p>
+                </div>
+              </div>
+
+              {/* Large Far Right */}
+              <div className="group relative overflow-hidden rounded-xl w-[330px] h-[260px] sm:w-[360px] sm:h-[280px]">
+                <img
+                  src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70"
+                  className="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+                />
+                <div className="absolute bottom-0 left-0 right-0 p-4 bg-black/40 opacity-0 group-hover:opacity-100 transition">
+                  <p className="text-white text-sm font-semibold tracking-wide">
+                    COLLABORATION
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Services Section */}
-        <section id="services" className="py-20 sm:py-24 bg-white">
+        <section id="services" className="py-20 sm:py-24 bg-white hidden">
           <div className="container mx-auto px-4 sm:px-6">
             {/* Section Header - Two Column Layout */}
             <div className="mb-16">
@@ -438,7 +523,7 @@ function Home() {
         </section>
 
         {/* Platforms Section */}
-        <section id="platforms" className="py-24 sm:py-32 bg-white">
+        <section id="platforms" className="py-24 sm:py-32 bg-white hidden">
           <div className="container mx-auto px-4 sm:px-6">
             {/* Section Header */}
             <div className="flex justify-between items-start mb-12 border-b-2 border-dotted border-gray-200 pb-6">

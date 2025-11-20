@@ -168,7 +168,7 @@ function Home() {
         </section>
 
         {/* Visual Showcase Section — System Agency Inspired */}
-        <section className="w-full bg-white py-24">
+        <section className="w-full bg-white pt-16 pb-24">
           <div className="container mx-auto px-4 sm:px-6">
             {/* GRID WRAPPER */}
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
@@ -203,18 +203,15 @@ function Home() {
                 </div>
               </div>
               {/* WIDE CINEMATIC VIDEO */}
-              <div className="relative sm:col-span-2 md:col-span-3 md:h-[500px] overflow-hidden group">
+              <div className="relative sm:col-span-2 md:col-span-3 md:h-[500px] xl:h-[700px] overflow-hidden group">
                 <video
                   src="videos/video-1.mp4"
                   alt="Cinematic video montage"
                   autoPlay
                   loop
                   muted
-                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
+                  className="w-full h-full object-cover transition-all duration-700"
                 />
-                <div className="absolute inset-0 bg-white/80 backdrop-blur-sm p-4 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <h3 className="text-lg md:text-xl font-semibold text-gray-900 poppins">Campaign Execution</h3>
-                </div>
               </div>
             </div>
           </div>

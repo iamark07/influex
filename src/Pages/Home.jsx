@@ -167,6 +167,59 @@ function Home() {
           </div>
         </section>
 
+        {/* Visual Showcase Section — System Agency Inspired */}
+        <section className="w-full bg-white py-24">
+          <div className="container mx-auto px-4 sm:px-6">
+            {/* GRID WRAPPER */}
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
+              <div className="relative overflow-hidden group">
+                <img
+                  src="img/other-img/img-1.jpg"
+                  alt="Creator working on a strategy"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
+                />
+                <div className="absolute inset-0 bg-white/80 backdrop-blur-sm p-4 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <h3 className="text-lg md:text-xl font-semibold text-gray-900 poppins">Brand Storytelling</h3>
+                </div>
+              </div>
+              <div className="relative overflow-hidden group">
+                <img
+                  src="img/other-img/img-2.jpg"
+                  alt="Creator in a studio setting"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
+                />
+                <div className="absolute inset-0 bg-white/80 backdrop-blur-sm p-4 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <h3 className="text-lg md:text-xl font-semibold text-gray-900 poppins">Content Production</h3>
+                </div>
+              </div>
+              <div className="relative overflow-hidden group">
+                <img
+                  src="img/other-img/img-3.jpg"
+                  alt="Behind the scenes of a video shoot"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
+                />
+                <div className="absolute inset-0 bg-white/80 backdrop-blur-sm p-4 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <h3 className="text-lg md:text-xl font-semibold text-gray-900 poppins">Audience Growth</h3>
+                </div>
+              </div>
+              {/* WIDE CINEMATIC VIDEO */}
+              <div className="relative sm:col-span-2 md:col-span-3 md:h-[500px] overflow-hidden group">
+                <video
+                  src="videos/video-1.mp4"
+                  alt="Cinematic video montage"
+                  autoPlay
+                  loop
+                  muted
+                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
+                />
+                <div className="absolute inset-0 bg-white/80 backdrop-blur-sm p-4 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <h3 className="text-lg md:text-xl font-semibold text-gray-900 poppins">Campaign Execution</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Creators Showcase Section */}
         <section className="relative py-24 sm:py-32 bg-white overflow-hidden hidden">
           <div className="container mx-auto px-4 sm:px-6 relative">
@@ -265,84 +318,72 @@ function Home() {
           </div>
         </section>
 
-        {/* Creative Floating Collage Section */}
-        <section className="bg-white py-24 sm:py-32 overflow-hidden hidden">
+        {/* How We Work Section */}
+        <section className="bg-white py-24 sm:py-32 hidden">
           <div className="container mx-auto px-4 sm:px-6">
-            {/* Section Heading */}
-            <div className="text-center mb-20">
-              <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 poppins tracking-tight">
-                The Creator Spectrum
-              </h2>
-              <p className="mt-4 text-lg text-gray-600 font-sans max-w-2xl mx-auto">
-                A glimpse into the creativity, strategy, and energy inside our
-                creator network.
-              </p>
-            </div>
-
-            {/* FLOATING COLLAGE LAYOUT */}
-            <div className="relative flex flex-wrap justify-center gap-6">
-              {/* Large Top Left */}
-              <div className="group relative overflow-hidden rounded-xl w-[330px] h-[230px] sm:w-[360px] sm:h-[260px]">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+              {/* Left Side: Image */}
+              <div className="order-1 lg:order-2 group relative overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1558402681-459490272726"
-                  className="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+                  src="https://images.unsplash.com/photo-1522881451255-f59ad836fdfb?q=80&w=1887"
+                  alt="A creator planning their work on a glass wall"
+                  className="w-full h-[550px] lg:h-[700px] object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
                 />
-                <div className="absolute bottom-0 left-0 right-0 p-4 bg-black/40 opacity-0 group-hover:opacity-100 transition">
-                  <p className="text-white text-sm font-semibold tracking-wide">
-                    TEAMWORK
-                  </p>
-                </div>
               </div>
 
-              {/* Small Left */}
-              <div className="group relative overflow-hidden rounded-xl w-[220px] h-[180px] sm:w-[250px] sm:h-[200px] mt-10">
-                <img
-                  src="https://images.unsplash.com/photo-1590650046871-2f9f1c7b3d58"
-                  className="w-full h-full object-cover transition duration-500 group-hover:scale-110"
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-3 bg-black/40 opacity-0 group-hover:opacity-100 transition">
-                  <p className="text-white text-sm font-semibold tracking-wide">
-                    PLANNING
+              {/* Right Side: Text Content */}
+              <div className="order-2 lg:order-1">
+                <div className="max-w-lg">
+                  <p className="text-base font-semibold text-indigo-600 poppins tracking-wide">
+                    Our process
                   </p>
-                </div>
-              </div>
+                  <h2 className="mt-4 text-4xl sm:text-5xl font-bold text-gray-900 poppins tracking-tight">
+                    How we work with creators
+                  </h2>
+                  <p className="mt-6 text-lg text-gray-600 font-sans">
+                    We follow a structured, collaborative process to ensure your
+                    brand's success.
+                  </p>
 
-              {/* Tall Center */}
-              <div className="group relative overflow-hidden rounded-xl w-[260px] h-[400px] sm:w-[300px] sm:h-[450px]">
-                <img
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
-                  className="w-full h-full object-cover transition duration-500 group-hover:scale-110"
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-4 bg-black/40 opacity-0 group-hover:opacity-100 transition">
-                  <p className="text-white text-sm font-semibold tracking-wide">
-                    CREATIVE MEETUPS
-                  </p>
-                </div>
-              </div>
-
-              {/* Medium Right */}
-              <div className="group relative overflow-hidden rounded-xl w-[280px] h-[220px] sm:w-[320px] sm:h-[250px] mt-14">
-                <img
-                  src="https://images.unsplash.com/photo-1581091012184-5c76d3971f97"
-                  className="w-full h-full object-cover transition duration-500 group-hover:scale-110"
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-4 bg-black/40 opacity-0 group-hover:opacity-100 transition">
-                  <p className="text-white text-sm font-semibold tracking-wide">
-                    WORKFLOW
-                  </p>
-                </div>
-              </div>
-
-              {/* Large Far Right */}
-              <div className="group relative overflow-hidden rounded-xl w-[330px] h-[260px] sm:w-[360px] sm:h-[280px]">
-                <img
-                  src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70"
-                  className="w-full h-full object-cover transition duration-500 group-hover:scale-110"
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-4 bg-black/40 opacity-0 group-hover:opacity-100 transition">
-                  <p className="text-white text-sm font-semibold tracking-wide">
-                    COLLABORATION
-                  </p>
+                  {/* Stacked Steps */}
+                  <div className="mt-12 space-y-10">
+                    <div className="relative pl-12 border-l border-gray-200">
+                      <h3 className="text-xl font-bold text-gray-900 poppins">
+                        <span className="absolute -left-5 top-0 text-gray-400">
+                          01
+                        </span>
+                        Discover & Audit
+                      </h3>
+                      <p className="mt-2 text-base text-gray-600 font-sans">
+                        We start by deeply understanding your brand, audience,
+                        and current market position.
+                      </p>
+                    </div>
+                    <div className="relative pl-12 border-l border-gray-200">
+                      <h3 className="text-xl font-bold text-gray-900 poppins">
+                        <span className="absolute -left-5 top-0 text-gray-400">
+                          02
+                        </span>
+                        Strategy & Campaigns
+                      </h3>
+                      <p className="mt-2 text-base text-gray-600 font-sans">
+                        Next, we craft a bespoke strategy and design campaigns
+                        that resonate and convert.
+                      </p>
+                    </div>
+                    <div className="relative pl-12 border-l border-gray-200">
+                      <h3 className="text-xl font-bold text-gray-900 poppins">
+                        <span className="absolute -left-5 top-0 text-gray-400">
+                          03
+                        </span>
+                        Execute & Grow
+                      </h3>
+                      <p className="mt-2 text-base text-gray-600 font-sans">
+                        Finally, we launch, manage, and optimize for continuous
+                        growth and impact.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

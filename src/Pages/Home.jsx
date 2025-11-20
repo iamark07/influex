@@ -168,78 +168,76 @@ function Home() {
         </section>
 
         {/* --- Cinematic Visual Storytelling Section --- */}
-<section className="bg-white py-14 overflow-hidden">
+        <section className="bg-white py-14 overflow-hidden">
+          {/* 2. Asymmetrical Visual Mosaic */}
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="grid sm:grid-cols-2 gap-5">
+              {/* Card 1 */}
+              <div className="relative overflow-hidden group rounded-none">
+                <img
+                  src="img/other-img/img-2.jpg"
+                  alt="Creator in a studio setting"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
+                />
 
-  {/* 2. Asymmetrical Visual Mosaic */}
-  <div className="container mx-auto px-4 sm:px-6">
+                {/* Cinematic Hover Layer */}
+                <div className="absolute inset-0 bg-white/80 backdrop-blur-sm flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+                  <h3
+                    className="text-gray-900 text-lg md:text-2xl font-semibold tracking-wide mb-2
+          transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 uppercase"
+                  >
+                    Content Production
+                  </h3>
 
-    <div className="grid sm:grid-cols-2 gap-5">
+                  <p
+                    className="text-black/80 text-sm md:text-base tracking-wide transform translate-y-6
+          group-hover:translate-y-0 transition-all duration-700 uppercase"
+                  >
+                    Visual storytelling designed to inspire.
+                  </p>
+                </div>
+              </div>
 
-      {/* Card 1 */}
-      <div className="relative overflow-hidden group rounded-none">
-        <img
-          src="img/other-img/img-2.jpg"
-          alt="Creator in a studio setting"
-          className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
-        />
+              {/* Card 2 */}
+              <div className="relative overflow-hidden group rounded-none">
+                <img
+                  src="img/other-img/img-3.jpg"
+                  alt="Behind the scenes of a video shoot"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
+                />
 
-        {/* Cinematic Hover Layer */}
-        <div className="absolute inset-0 bg-white/80 backdrop-blur-sm flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+                {/* Cinematic Hover Layer */}
+                <div className="absolute inset-0 bg-white/80 backdrop-blur-sm flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+                  <h3
+                    className="text-gray-900 text-lg md:text-2xl font-semibold tracking-wide mb-2
+          transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 uppercase"
+                  >
+                    Audience Growth
+                  </h3>
 
-          <h3 className="text-gray-900 text-lg md:text-2xl font-semibold tracking-wide poppins mb-2
-          transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-            Content Production
-          </h3>
+                  <p
+                    className="text-black/80 text-sm md:text-base tracking-wide transform translate-y-6
+          group-hover:translate-y-0 transition-all duration-700 uppercase"
+                  >
+                    Scaling creators into powerful digital brands.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
 
-          <p className="text-black/80 text-sm md:text-base tracking-wide transform translate-y-6
-          group-hover:translate-y-0 transition-all duration-700">
-            Visual storytelling designed to inspire.
-          </p>
-
-        </div>
-      </div>
-
-      {/* Card 2 */}
-      <div className="relative overflow-hidden group rounded-none">
-        <img
-          src="img/other-img/img-3.jpg"
-          alt="Behind the scenes of a video shoot"
-          className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
-        />
-
-        {/* Cinematic Hover Layer */}
-        <div className="absolute inset-0 bg-white/80 backdrop-blur-sm flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
-
-          <h3 className="text-gray-900 text-lg md:text-2xl font-semibold tracking-wide poppins mb-2
-          transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-            Audience Growth
-          </h3>
-
-          <p className="text-black/80 text-sm md:text-base tracking-wide transform translate-y-6
-          group-hover:translate-y-0 transition-all duration-700">
-            Scaling creators into powerful digital brands.
-          </p>
-
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  {/* 1. Full-Width Cinematic Video */}
-  <div className="w-full h-[70vh] md:h-screen mb-28 sm:mb-40 mt-10">
-    <video
-      src="videos/video-2.mp4"
-      className="w-full h-full object-cover"
-      autoPlay
-      loop
-      muted
-      playsInline
-    />
-  </div>
-
-</section>
-
+          {/* 1. Full-Width Cinematic Video */}
+          <div className="w-full h-[70vh] md:h-screen mb-28 sm:mb-40 mt-10">
+            <video
+              src="videos/video-2.mp4"
+              className="w-full h-full object-cover"
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+          </div>
+        </section>
 
         {/* Creators Showcase Section */}
         <section className="relative py-24 sm:py-32 bg-white overflow-hidden hidden">

@@ -137,6 +137,35 @@ function Home() {
           </div>
         </section>
 
+        {/* Creator Impact Section */}
+        <section className="bg-white py-20 sm:py-32">
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+              {/* Left Side: Image */}
+              <div className="text-center lg:text-left">
+                <h2 className="text-2xl sm:text-5xl font-bold text-gray-900 poppins tracking-tight leading-tight">
+                  Creators. Brands.{" "}
+                  <span className="relative inline-block">
+                    Impact.
+                    <span className="absolute bottom-0 left-0 w-full h-1 bg-black transform translate-y-2"></span>
+                  </span>
+                </h2>
+                <p className="mt-8 text-lg sm:text-xl text-gray-600 font-sans max-w-lg mx-auto lg:mx-0">
+                  From concept to campaign, we partner with creators to build stories that move audiences.
+                </p>
+              </div>
+              {/* Right Side: Text */}
+              <div className="">
+                <img
+                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070"
+                  alt="A creator collaborating on a project"
+                  className="w-full h-[500px] lg:h-[650px] object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Creators Showcase Section */}
         <section className="relative py-24 sm:py-32 bg-white overflow-hidden">
           <div className="container mx-auto px-4 sm:px-6 relative">

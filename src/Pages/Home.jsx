@@ -25,21 +25,37 @@ function Home() {
     }
   }, [activeVideo]);
 
+  const [isCinematicVideoPlaying, setIsCinematicVideoPlaying] = useState(false);
+  const cinematicVideoRef = useRef(null);
+
+  const toggleCinematicVideo = () => {
+    const video = cinematicVideoRef.current;
+    if (video) {
+      if (video.paused) {
+        video.play();
+        setIsCinematicVideoPlaying(true);
+      } else {
+        video.pause();
+        setIsCinematicVideoPlaying(false);
+      }
+    }
+  };
+
   return (
     <div className="bg-white relative">
       <Header />
       <main className="overflow-x-hidden">
-        <div className="pt-16 pb-20">
+        <section className="pt-16 pb-20">
           <div className="container mx-auto px-4 sm:px-6">
             <h1 className="text-2xl md:text-5xl font-medium tracking-tight md:leading-snug capitalize max-w-5xl">
               Empowering creators to grow, <br /> influence, and build powerful
               digital brands.
             </h1>
           </div>
-        </div>
+        </section>
 
         {/* Marquee Section */}
-        <div className="bg-black py-4 md:py-5">
+        <section className="bg-black py-4 md:py-5">
           <marquee behavior="scroll" direction="left" scrollamount="6">
             <span className="flex gap-20 text-white text-sm md:text-lg font-semibold tracking-wider whitespace-nowrap">
               <div className="flex gap-20">
@@ -92,12 +108,12 @@ function Home() {
               </div>
             </span>
           </marquee>
-        </div>
+        </section>
 
         {/* Hero Section */}
-        <section className="relative h-dvh w-full flex items-center justify-center text-center bg-gray-900 text-white">
+        <section className="relative w-full flex items-center justify-center text-center bg-gray-900 text-white">
           {/* Cinematic Background */}
-          <div className="absolute inset-0 z-0 overflow-hidden">
+          <div className="h-dvh w-full overflow-hidden">
             <video
               src="/videos/video-3.mp4" // Replace with your actual video path
               className="w-full h-full object-cover"
@@ -106,57 +122,60 @@ function Home() {
               muted
               playsInline
             ></video>
-            {/* <div className="absolute inset-0 bg-black/50"></div> Increased overlay for better text readability */}
           </div>
+        </section>
 
-          {/* Centered Content */}
-          <div className="hidden relative z-10 container mx-auto px-4 sm:px-6">
-            <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl sm:text-6xl md:text-7xl font-medium tracking-tight text-white">
-                Amplify What Matters.
-              </h1>
-              <p className="mt-6 max-w-2xl mx-auto text-lg sm:text-xl text-gray-300">
-                We partner with visionary creators to build iconic brands and
-                shape the future of digital content.
-              </p>
-              <div className="mt-10 flex items-center justify-center gap-x-6">
-                <Link
-                  to="/apply"
-                  className="text-sm sm:text-base rounded-full bg-white px-8 py-3 font-medium text-gray-900 hover:bg-gray-200 transition-colors"
-                >
-                  Apply as a Creator
-                </Link>
-                <a
-                  href="#services"
-                  className="text-sm sm:text-base font-medium leading-6 text-white hover:underline underline-offset-4"
-                >
-                  Our Services
-                </a>
+        {/* Sub Heading Section Below Hero */}
+        <section className="bg-white py-20 sm:pt-24 pb-14">
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="flex flex-col md:flex-row  md:justify-between gap-8">
+              {/* Left Side Content */}
+              <div className="max-w-5xl">
+                <h2 className="text-2xl sm:text-4xl font-semibold tracking-tight leading-tight text-gray-900 poppins">
+                  Shaping Digital Culture With Every Story.
+                </h2>
+
+                <p className="mt-5 text-base sm:text-lg text-gray-600 max-w-5xl font-sans">
+                  We collaborate with top creators and innovative brands to
+                  craft meaningful stories, build stronger communities, and
+                  drive real impact in the digital world.
+                </p>
+              </div>
+
+              {/* Right Side Button */}
+              <div className="shrink-0">
+                <button className="text-gray-900 underline underline-offset-4 hover:text-black transition font-medium text-sm sm:text-lg">
+                  Learn More →
+                </button>
               </div>
             </div>
           </div>
         </section>
 
         {/* Creator Impact Section */}
-        <section className="bg-white py-20 sm:py-32">
+        <section className="bg-white pb-20">
           <div className="container mx-auto px-4 sm:px-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
               {/* Left Side: Image */}
-              <div className="text-center lg:text-left">
-                <h2 className="text-2xl sm:text-5xl font-bold text-gray-900 poppins tracking-tight leading-tight">
+              <div className="order-2 lg:order-1text-center lg:text-left border border-gray-200 h-full w-full flex flex-col justify-center px-5 py-14 sm:px-12">
+                <h2 className="text-xl sm:text-4xl lg:text-[42px] font-bold text-gray-900 poppins tracking-tight leading-tight">
                   Creators. Brands.{" "}
                   <span className="relative inline-block">
                     Impact.
                     <span className="absolute bottom-0 left-0 w-full h-1 bg-black transform translate-y-2"></span>
                   </span>
                 </h2>
-                <p className="mt-8 text-lg sm:text-xl text-gray-600 font-sans max-w-lg mx-auto lg:mx-0">
+                <p className="mt-6 md:mt-8 text-sm sm:text-lg text-gray-600 font-sans max-w-xl">
                   From concept to campaign, we partner with creators to build
                   stories that move audiences.
                 </p>
+                {/* Minimal CTA — looks premium */}
+                <button className="w-fit mt-8 text-gray-900 underline underline-offset-4 hover:text-black transition font-medium">
+                  Explore Our Work →
+                </button>
               </div>
               {/* Right Side: Text */}
-              <div className="">
+              <div className="order-1 lg:order-2">
                 <img
                   src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070"
                   alt="A creator collaborating on a project"
@@ -167,11 +186,46 @@ function Home() {
           </div>
         </section>
 
+        {/* 1. Full-Width Cinematic Video */}
+        <div className="relative w-full h-[70vh] md:h-[700px] mt-10">
+          <video
+            ref={cinematicVideoRef}
+            src="videos/video-2.mp4"
+            className="w-full h-full object-cover"
+            loop
+            muted
+            playsInline
+          />
+          {/* Play/Pause Overlay */}
+          <div
+            className={`absolute inset-0 flex items-center justify-center cursor-pointer transition-all duration-300 ${
+              isCinematicVideoPlaying
+                ? "bg-black/0 hover:bg-black/30"
+                : "bg-black/30"
+            }`}
+            onClick={toggleCinematicVideo}
+          >
+            <div
+              className={`flex items-center justify-center w-20 h-20 md:w-24 md:h-24 bg-black/40 rounded-full backdrop-blur-sm transition-opacity duration-300 ${
+                isCinematicVideoPlaying
+                  ? "opacity-0 group-hover:opacity-100"
+                  : "opacity-100"
+              }`}
+            >
+              <i
+                className={`${
+                  isCinematicVideoPlaying ? "ri-pause-fill" : "ri-play-fill"
+                } text-white text-4xl md:text-5xl`}
+              ></i>
+            </div>
+          </div>
+        </div>
+
         {/* --- Cinematic Visual Storytelling Section --- */}
-        <section className="bg-white py-14 overflow-hidden">
+        <section className="bg-white pt-40 pb-20 overflow-hidden">
           {/* 2. Asymmetrical Visual Mosaic */}
           <div className="container mx-auto px-4 sm:px-6">
-            <div className="grid sm:grid-cols-2 gap-5">
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
               {/* Card 1 */}
               <div className="relative overflow-hidden group rounded-none">
                 <img
@@ -223,19 +277,32 @@ function Home() {
                   </p>
                 </div>
               </div>
-            </div>
-          </div>
+              {/* Card 3 */}
+              <div className="relative overflow-hidden group rounded-none">
+                <img
+                  src="img/other-img/img-1.jpg"
+                  alt="Creator in a brand collaboration"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
+                />
 
-          {/* 1. Full-Width Cinematic Video */}
-          <div className="w-full h-[70vh] md:h-screen mb-28 sm:mb-40 mt-10">
-            <video
-              src="videos/video-2.mp4"
-              className="w-full h-full object-cover"
-              autoPlay
-              loop
-              muted
-              playsInline
-            />
+                {/* Cinematic Hover Layer */}
+                <div className="absolute inset-0 bg-white/80 backdrop-blur-sm flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+                  <h3
+                    className="text-gray-900 text-lg md:text-2xl font-semibold tracking-wide mb-2
+          transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 uppercase"
+                  >
+                    Brand Partnerships
+                  </h3>
+
+                  <p
+                    className="text-black/80 text-sm md:text-base tracking-wide transform translate-y-6
+          group-hover:translate-y-0 transition-all duration-700 uppercase"
+                  >
+                    Connecting creators with leading brands.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -338,76 +405,93 @@ function Home() {
         </section>
 
         {/* How We Work Section */}
-        <section className="bg-white py-24 sm:py-32 hidden">
+        <section className="bg-white py-24 sm:py-32">
           <div className="container mx-auto px-4 sm:px-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
               {/* Left Side: Image */}
-              <div className="order-1 lg:order-2 group relative overflow-hidden">
+              <div className="order-1 lg:order-2 group relative overflow-hidden h-full">
                 <img
                   src="https://images.unsplash.com/photo-1522881451255-f59ad836fdfb?q=80&w=1887"
                   alt="A creator planning their work on a glass wall"
-                  className="w-full h-[550px] lg:h-[700px] object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                  className="w-full h-[550px] lg:h-full object-cover transition-transform duration-500 ease-in-out"
                 />
               </div>
 
               {/* Right Side: Text Content */}
-              <div className="order-2 lg:order-1">
-                <div className="max-w-lg">
-                  <p className="text-base font-semibold text-indigo-600 poppins tracking-wide">
-                    Our process
-                  </p>
-                  <h2 className="mt-4 text-4xl sm:text-5xl font-bold text-gray-900 poppins tracking-tight">
-                    How we work with creators
-                  </h2>
-                  <p className="mt-6 text-lg text-gray-600 font-sans">
-                    We follow a structured, collaborative process to ensure your
-                    brand's success.
-                  </p>
+              <div className="order-2 lg:order-1 flex flex-col justify-center border border-gray-200  px-5 py-14 sm:px-12 h-full w-full">
+                <h2 className="text-xl sm:text-4xl lg:text-[42px] font-bold text-gray-900 poppins tracking-tight">
+                  How we work with creators
+                </h2>
 
-                  {/* Stacked Steps */}
-                  <div className="mt-12 space-y-10">
-                    <div className="relative pl-12 border-l border-gray-200">
-                      <h3 className="text-xl font-bold text-gray-900 poppins">
-                        <span className="absolute -left-5 top-0 text-gray-400">
-                          01
-                        </span>
-                        Discover & Audit
-                      </h3>
-                      <p className="mt-2 text-base text-gray-600 font-sans">
-                        We start by deeply understanding your brand, audience,
-                        and current market position.
-                      </p>
-                    </div>
-                    <div className="relative pl-12 border-l border-gray-200">
-                      <h3 className="text-xl font-bold text-gray-900 poppins">
-                        <span className="absolute -left-5 top-0 text-gray-400">
-                          02
-                        </span>
-                        Strategy & Campaigns
-                      </h3>
-                      <p className="mt-2 text-base text-gray-600 font-sans">
-                        Next, we craft a bespoke strategy and design campaigns
-                        that resonate and convert.
-                      </p>
-                    </div>
-                    <div className="relative pl-12 border-l border-gray-200">
-                      <h3 className="text-xl font-bold text-gray-900 poppins">
-                        <span className="absolute -left-5 top-0 text-gray-400">
-                          03
-                        </span>
-                        Execute & Grow
-                      </h3>
-                      <p className="mt-2 text-base text-gray-600 font-sans">
-                        Finally, we launch, manage, and optimize for continuous
-                        growth and impact.
-                      </p>
-                    </div>
+                <p className="max-w-lg mt-6 text-lg text-gray-600 font-sans">
+                  We follow a structured, collaborative process to ensure your
+                  brand's success.
+                </p>
+
+                {/* Stacked Steps */}
+                <div className="mt-12 space-y-10 pl-4">
+                  {/* 01 */}
+                  <div className="relative pl-8 md:pl-10 border-l border-gray-200">
+                    <h3 className="md:text-xl font-bold text-gray-900 poppins">
+                      <span className="absolute -left-3 bg-white pb-1 top-0 text-gray-400">
+                        01
+                      </span>
+                      Discover & Audit
+                    </h3>
+                    <p className="mt-2 text-sm sm:text-base text-gray-600 font-sans">
+                      We analyze your brand, audience, and market position to
+                      build a solid foundation for growth.
+                    </p>
+                  </div>
+
+                  {/* 02 */}
+                  <div className="relative pl-8 md:pl-10 border-l border-gray-200">
+                    <h3 className="md:text-xl font-bold text-gray-900 poppins">
+                      <span className="absolute -left-3 bg-white pb-1 top-0 text-gray-400">
+                        02
+                      </span>
+                      Strategy & Campaigns
+                    </h3>
+                    <p className="mt-2 text-sm sm:text-base text-gray-600 font-sans">
+                      We craft a tailored strategy and design compelling
+                      campaigns that resonate with your audience.
+                    </p>
+                  </div>
+
+                  {/* 03 */}
+                  <div className="relative pl-8 md:pl-10 border-l border-gray-200">
+                    <h3 className="md:text-xl font-bold text-gray-900 poppins">
+                      <span className="absolute -left-3 bg-white pb-1 top-0 text-gray-400">
+                        03
+                      </span>
+                      Execute & Grow
+                    </h3>
+                    <p className="mt-2 text-sm sm:text-base text-gray-600 font-sans">
+                      Our team launches, manages, and optimizes campaigns to
+                      ensure continuous growth and impact.
+                    </p>
+                  </div>
+
+                  {/* 04 */}
+                  <div className="relative pl-8 md:pl-10 border-l border-gray-200">
+                    <h3 className="md:text-xl font-bold text-gray-900 poppins">
+                      <span className="absolute -left-3 bg-white pb-1 top-0 text-gray-400">
+                        04
+                      </span>
+                      Scale & Sustain
+                    </h3>
+                    <p className="mt-2 text-sm sm:text-base text-gray-600 font-sans">
+                      We focus on long-term partnerships and sustainable
+                      strategies to scale your creator brand.
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
+
+        
 
         {/* Services Section */}
         <section id="services" className="py-20 sm:py-24 bg-white hidden">

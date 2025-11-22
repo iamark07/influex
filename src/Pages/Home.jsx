@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
-import Header from "../components/Layouts/Header";
+import Header from "../Components/Layouts/Header";
 import { Link } from "react-router-dom";
-import Footer from "../components/Layouts/Footer";
+import Footer from "../Components/Layouts/Footer";
 import "../assets/css/style.css"; // Corrected import path
 
 function Home() {
